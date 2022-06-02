@@ -21,7 +21,16 @@ const Costs = (props) => {
                     year={selectedYear}
                     onChangeYear={yearChangeHandler}
                 />
-                <CostItem
+                {props.costs.map((cost) => (
+                    <CostItem
+                        date={cost.date}
+                        description={cost.description}
+                        amount={cost.amount}
+                    />
+                ))}
+
+
+                {/*          <CostItem
                     date={props.costs[0].date}
                     description={props.costs[0].description}
                     amount={props.costs[0].amount}
@@ -35,7 +44,9 @@ const Costs = (props) => {
                     date={props.costs[2].date}
                     description={props.costs[2].description}
                     amount={props.costs[2].amount}
-                />
+                /> */}
+
+
             </Card>
         </div>
     );
