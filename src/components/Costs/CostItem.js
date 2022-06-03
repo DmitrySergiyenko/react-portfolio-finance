@@ -4,23 +4,25 @@ import Card from '../UI/Card';
 
 const CostItem = (props) => {
 
-/*     useState(props.description);
+    /*     useState(props.description);
+    
+        const [description, setDescription] = useState(props.description); */
 
-    const [description, setDescription] = useState(props.description); */
-
-/*     const changeDescriptionHandker = () => {
-        setDescription("New item");
-    };
- */
+    /*     const changeDescriptionHandker = () => {
+            setDescription("New item");
+        };
+     */
     return (
-        <Card className='cost-item'>
-            <CostDate date={props.date} />
-            <div className='cost-item__description'>
-                <h2>{props.description}</h2>
-                <div className='cost-item__price'>${props.amount}</div>
-            </div>
-            {/* <button onClick={changeDescriptionHandker}>Change item</button> */}
-        </Card>
+        <li>
+            <Card className='cost-item'>
+                <CostDate date={props.date} />
+                <div className='cost-item__description'>
+                    <h2>{props.description}</h2>
+                    <div className='cost-item__price'>${props.amount}</div>
+                </div>
+                {/* <button onClick={changeDescriptionHandker}>Change item</button> */}
+            </Card>
+        </li>
     );
 }
 
