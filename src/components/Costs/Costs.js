@@ -3,6 +3,7 @@ import './Costs.css'
 import CostsFilter from './CostsFilter';
 import { useState } from 'react';
 import CostList from './CostList';
+import CostDiagram from './CostDiagram';
 
 const Costs = (props) => {
 
@@ -24,7 +25,7 @@ const Costs = (props) => {
                     year={selectedYear}
                     onChangeYear={yearChangeHandler}
                 />
-
+                <CostDiagram costs={filteredCosts}/>
                 <CostList costs={filteredCosts}/>
                {/*          <CostItem
                     date={props.costs[0].date}
